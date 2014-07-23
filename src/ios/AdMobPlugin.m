@@ -316,7 +316,7 @@
         int oldWebViewContentInsetTop = self.webViewContentInsets.top;
         int newBannerViewY = self.superViewFrame.origin.y + oldWebViewContentInsetTop;
 
-        self.bannerView.frame = CGRectMake(superViewFrame.origin.x,
+        self.bannerView.frame = CGRectMake((self.superViewFrame.size.width - bannerViewFrame.size.width) / 2,
                                            newBannerViewY,
                                            bannerViewFrame.size.width,
                                            bannerViewFrame.size.height);
@@ -337,7 +337,7 @@
         int oldWebViewContentInsetBottom = self.webViewContentInsets.bottom;
         int newBannerViewY = self.superViewFrame.size.height - oldWebViewContentInsetBottom - bannerViewFrame.size.height;
         
-        self.bannerView.frame = CGRectMake(superViewFrame.origin.x,
+        self.bannerView.frame = CGRectMake((self.superViewFrame.size.width - bannerViewFrame.size.width) / 2,
                                            newBannerViewY,
                                            bannerViewFrame.size.width,
                                            bannerViewFrame.size.height);
